@@ -1,15 +1,32 @@
-# Initialises Terraform providers and sets their version numbers.
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.51.0"
+    }
+    kubernetes = {
+      source = "hashicorp/kubernetes"
+      version = "2.21.1"
+    }
+    tls = {
+      source = "hashicorp/tls"
+      version = "4.0.4"
+    }
+  }
+}
 
+# Configure Providers
 provider "azurerm" {
-    version = "1.38.0"
+  features {}
+
+  subscription_id = "xxxxxxxx-xxxxxxxx-xxxxxxx-xxxx"
 }
 
 provider "tls" {
-    version = "2.1.0"
+  # Configuration options
 }
 
 provider "kubernetes" {
-    version = "1.10.0"
     host = azurerm_kubernetes_cluster.cluster.kube_config[0].host
 
     client_certificate = base64decode(azurerm_kubernetes_cluster.cluster.kube_config[0].client_certificate)

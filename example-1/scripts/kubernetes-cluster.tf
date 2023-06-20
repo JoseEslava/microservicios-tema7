@@ -22,8 +22,8 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     }
 
     service_principal {
-        client_id     = ""
-        client_secret = ""
+        client_id     = "xxxxxx-xxxxxx-xxxxx-xxxxx"
+        client_secret = "xxxxxxxxxxxxx"
     }
 }
 

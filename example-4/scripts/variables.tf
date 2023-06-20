@@ -19,9 +19,7 @@ variable app_version { # Can't be called version! That's a reserved word.
 }
 
 variable client_id {
-  default = "a71b0b05-3164-429d-9507-e6cffb2a7b16"
 }
 
 variable client_secret {
-  default = "Dob8Q~X7NslvMAxQKoACCtcKAprP7Ks17XIpsdnE"
 }

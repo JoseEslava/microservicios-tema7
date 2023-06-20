@@ -17,5 +17,6 @@ output "registry_un" {
 }
 
 output "registry_pw" {
+  sensitive = true
   value = azurerm_container_registry.container_registry.admin_password
 }

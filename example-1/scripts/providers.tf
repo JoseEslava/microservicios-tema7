@@ -21,7 +21,7 @@ terraform {
 provider "azurerm" {
   features {}
 
-  subscription_id = ""
+  subscription_id = "xxxxx-xxxxxxx-xxxxxx-xxxxxx"
 }
 
 provider "tls" {
